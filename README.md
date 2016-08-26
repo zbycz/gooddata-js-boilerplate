@@ -1,2 +1,1 @@
-# gdc-js-boilerplate
- GoodData JS app boilerplate PAAS-5652
+GoodData JS app boilerplate
