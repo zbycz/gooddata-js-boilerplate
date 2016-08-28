@@ -1,0 +1,34 @@
+.main-loading {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+
+    color: $gd-color-text-dimmed;
+    text-align: center;
+    transform: translateY(-50%);
+
+    &:before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin: 10px auto;
+        background: url('./assets/loading-32.gif') no-repeat center center;
+    }
+}
+
+.editor-loading {
+    opacity: 0;
+    animation: 0.3s ease 0.2s normal forwards 1 fadein;
+    background: url('./assets/loading-32.gif') no-repeat center center;
+}
+
+@keyframes fadein{
+    from {
+        opacity:0
+    }
+    to {
+        opacity:1
+    }
+}

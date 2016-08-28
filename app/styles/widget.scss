@@ -1,0 +1,69 @@
+@keyframes edit-mode-fade-in { from { opacity: 0} }
+@-webkit-keyframes edit-mode-fade-in { from { opacity: 0} }
+
+.gd-widget {
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+}
+
+.loading-box {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(250,250,250,1);
+}
+
+.edit-mode-overlay {
+    opacity: 1;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(255,255,255,0.7);
+
+    border: 1px solid #aaa;
+    border-radius: 8px;
+
+    animation: edit-mode-fade-in 0.5s;
+    -webkit-animation: edit-mode-fade-in 0.5s;
+}
+
+.widget-edit-controls {
+    width: 200px;
+    position: relative;
+    margin: 0 auto;
+    top: 45%;
+    z-index: 11;
+    text-align: center;
+}
+
+.widget-edit-control {
+    font-size: 35px;
+    display: inline-block;
+    margin: 4px;
+    opacity: 0.85;
+
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+.widget-edit-add {
+    color: #01B304;
+}
+.widget-edit-remove {
+    color: #C0361A;
+}
+
+.widget-edit-split-horiz {
+    color: #1684CA;
+}
+
+.widget-edit-split-vert {
+    color: #1684CA;
+    -webkit-transform: rotate(90deg);
+}

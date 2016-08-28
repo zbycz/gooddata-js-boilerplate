@@ -1,0 +1,104 @@
+@import "~goodstrap/packages/core/styles/themes/indigo/mixins";
+
+$adi-field-icon-color: $gd-color-highlight;
+
+$adi-dropzone-active-color: $gd-color-highlight;
+$adi-dropzone-background-color: #EDF7FD;
+
+$adi-bucket-background-color: #FCFCFD;
+$adi-bucket-border-color: #C9D5E0;
+$adi-bucket-box-shadow: 0 1px 2px 0 rgba(20,56,93,0.10);
+$adi-bucket-border-radius: 3px;
+$adi-bucket-item-active-border-color: #B1C1D1;
+$adi-bucket-item-header-padding: 4px;
+$adi-bucket-message-background-color: #f9fafb;
+$adi-bucket-message-border-color: #dde4eb;
+$adi-bucket-message-border-radius: 5px;
+$adi-bucket-configuration-background-color: #F8FAFB;
+
+// These colors work only when mixed with white background!
+$adi-bucket-background-color-mix-white: rgba(212,212,223,0.07); //#FCFCFD
+$adi-bucket-message-background-color-mix-white: rgba(188,199,210,0.1); //#f9fafb
+$adi-bucket-configuration-background-color-mix-white: rgba(136,170,185,0.06); //#F8FAFB
+
+
+// MAQL code highlighting palette
+$maql-fact: $gd-color-positive;
+$maql-metric: $gd-color-positive;
+$maql-attribute: #ab55a3;
+$maql-attributeDisplayForm: #ab55a3;
+$maql-attribute_element: #f18600;
+
+$narrowDevice: "(max-width: 1400px) and (min-height: 860px)";
+
+@mixin transform-rotate($degrees) {
+    -webkit-transform: rotate(#{$degrees}deg);
+    -moz-transform: rotate(#{$degrees}deg);
+    -ms-transform: rotate(#{$degrees}deg);
+    -o-transform: rotate(#{$degrees}deg);
+    transform: rotate(#{$degrees}deg);
+}
+
+// @see http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix {
+    &:after {
+        content: ' ';
+        clear: both;
+        display: table;
+    }
+}
+
+/**
+ * Pure css scrolling shadows:
+ * http://lea.verou.me/2012/04/background-attachment-local/
+ */
+@mixin scroll-view-shadow($background) {
+    background:
+            /* Shadow covers */
+            linear-gradient($background 30%, rgba(252,252,253,0)),
+            linear-gradient(rgba(252,252,253,0), $background 70%) 0 100%,
+
+                /* Shadows */
+            radial-gradient(50% 0, farthest-side, rgba(0,0,0,.15), rgba(0,0,0,0)),
+            radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.15), rgba(0,0,0,0)) 0 100%,
+
+                /* Shadows */
+            radial-gradient(50% 0, farthest-side, rgba(0,0,0,.5), rgba(0,0,0,0)),
+            radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.5), rgba(0,0,0,0)) 0 100%;
+
+    background:
+            /* Shadow covers */
+            linear-gradient($background 30%, rgba(252,252,253,0)),
+            linear-gradient(rgba(252,252,253,0), $background 70%) 0 100%,
+
+                /* Shadows */
+            radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.15), rgba(0,0,0,0)),
+            radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.15), rgba(0,0,0,0)) 0 100%,
+
+                /* Shadow line */
+            radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.5), rgba(0,0,0,0)),
+            radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.5), rgba(0,0,0,0)) 0 100%;
+
+    background-repeat: no-repeat;
+    background-color: $background;
+    background-size: 100% 15px, 100% 15px, 100% 5px, 100% 5px, 100% 1px, 100% 1px;
+
+    /* Opera doesn't support this in the shorthand */
+    background-attachment: local, local, scroll, scroll, scroll, scroll;
+}
+
+// http://stackoverflow.com/questions/5697067/css-for-grabbing-cursors-drag-drop?rq=1
+@mixin grabbable {
+    cursor: move; // fallback if grab cursor is unsupported
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+@mixin grabbing {
+    cursor: move; // fallback if grab cursor is unsupported
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}

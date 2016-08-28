@@ -1,0 +1,155 @@
+.adi-shortcut-metric-attribute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: transparent;
+}
+
+.adi-shortcut-title {
+    margin-bottom: 1em;
+
+    font-weight: 700;
+    font-size: 11px;
+    color: $gd-color-state-blank;
+}
+
+.adi-shortcut {
+    position: relative;
+
+    background: rgba(237,246,253,0.85);
+    border: 4px dashed $gd-color-highlight;
+    border-radius: 15px;
+
+    text-align: center;
+
+    .adi-drop-disabled & {
+        background-color: $adi-bucket-message-background-color-mix-white;
+        border: 4px dashed $adi-bucket-message-border-color;
+
+
+        .adi-shortcut-type, p {
+            color: $gd-color-text-dimmed;
+        }
+    }
+
+    .adi-shortcut-inner {
+        display: flex;
+        margin: 10px;
+
+        border-radius: 7px;
+    }
+
+    &.primary {
+        .adi-shortcut-inner {
+            flex-direction: column;
+            padding: 25px;
+            height: 150px;
+        }
+
+        p {
+            font-size: 24px;
+            line-height: 32px;
+            margin: 15px 0 0 0;
+        }
+
+        &.adi-droppable-hover p {
+            color: #fff;
+        }
+    }
+
+    &.secondary {
+        width: 50%;
+        height: 135px;
+        margin: 20px 0 0 0;
+
+        .adi-shortcut-inner {
+            align-items: center;
+
+            height: 114px;
+        }
+
+        p {
+            flex: 1;
+            margin: 0 15px 0 0;
+
+            text-align: left;
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+}
+
+.adi-droppable-hover {
+    .adi-shortcut-inner {
+        background: $gd-color-highlight;
+    }
+
+    p {
+        color: #fff;
+    }
+}
+
+.adi-shortcut-type {
+    margin: 0 auto 5px;
+    background-repeat: no-repeat;
+}
+
+.adi-shortcut-metric-quarters {
+    width: 89px;
+    height: 69px;
+
+    margin: 0 20px;
+
+    background-image: url('./assets/shortcut-trending.svg');
+
+    .adi-droppable-hover & {
+        background-image: url('./assets/shortcut-trending-hover.svg');
+    }
+}
+
+.adi-shortcut-info {
+    width: 38px;
+    height: 38px;
+
+    margin: 0 20px;
+
+    background-image: url('./assets/information.svg');
+}
+
+.adi-shortcut-computing {
+    width: 89px;
+    height: 69px;
+
+    margin: 0 20px;
+
+    background-position: center center;
+    background-image: url('./assets/computing.gif');
+
+    .adi-droppable-hover & {
+        background-image: url('./assets/computing-hover.gif');
+    }
+}
+
+.adi-shortcut-bar-metric {
+    width: 84px;
+    height: 58px;
+
+    background-image: url('./assets/shortcut-metric-in-column.svg');
+
+    .adi-droppable-hover & {
+        background-image: url('./assets/shortcut-metric-in-column-hover.svg');
+    }
+}
+
+.adi-shortcut-attribute-table {
+    width: 81px;
+    height: 59px;
+
+    background-image: url('./assets/shortcut-values-in-table.svg');
+
+    .adi-droppable-hover & {
+        background-image: url('./assets/shortcut-values-in-table-hover.svg');
+    }
+}

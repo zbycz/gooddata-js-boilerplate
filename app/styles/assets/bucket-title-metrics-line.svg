@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15857) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="03-3--chart-type" sketch:type="MSArtboardGroup" transform="translate(-250.000000, -168.000000)" stroke-linecap="round" stroke="#94A1AD" stroke-width="2">
+            <g id="Toolbars" sketch:type="MSLayerGroup" transform="translate(243.000000, 102.000000)">
+                <g id="metrics" transform="translate(0.000000, 58.000000)" sketch:type="MSShapeGroup">
+                    <g id="top">
+                        <g id="icon" transform="translate(8.000000, 9.000000)">
+                            <path d="M3.83693077e-13,7 C3.83693077e-13,7 0.474240138,11.9959633 2.82352941,11 C4.13755177,9.52716467 3.95142631,1.05219296e-06 6.58823529,4.97379915e-14 C7.67694187,-6.4287596e-07 10.7937055,9.55931203 13.1764706,9 C14.797442,8.77586221 16,4 16,4" id="Path-39"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

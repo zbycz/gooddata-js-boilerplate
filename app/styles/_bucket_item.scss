@@ -1,0 +1,93 @@
+@import "variables";
+
+%adi-bucket-item {
+    white-space: nowrap;
+    overflow: hidden;
+
+    div {
+        font-size: 12px;
+    }
+
+    div > span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    div:before {
+        position: relative;
+        width: 18px;
+        min-width: 18px;
+        display: inline-block;
+        margin-right: 8px;
+        margin-left: 3px;
+
+        text-align: center;
+        font-family: Indigo, sans-serif;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 20px;
+        color: $adi-field-icon-color;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &.type-date,
+    &.type-fact,
+    &.type-metric,
+    &.type-attribute {
+        div:before {
+            content: '';
+            top: -1px;
+        }
+    }
+
+    &.type-date {
+        div:before {
+            top: 1px;
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+            margin-left: 3px;
+
+            background-image: url('./assets/date.svg');
+
+            &.not-available div:before {
+                background-image: url('./assets/date-unrelated.svg');
+            }
+        }
+    }
+
+    &.type-fact,
+    &.type-metric {
+        div:before {
+            width: 18px;
+            height: 7px;
+            margin-right: 5px;
+            margin-left: 3px;
+
+            background-image: url('./assets/measure.svg');
+        }
+
+        &.not-available div:before {
+            background-image: url('./assets/measure-unrelated.svg');
+        }
+    }
+
+    &.type-attribute {
+        div:before {
+            top: 0;
+            width: 18px;
+            height: 7px;
+            margin-right: 6px;
+            margin-left: 2px;
+
+            background-image: url('./assets/attribute.svg');
+        }
+
+        &.not-available div:before {
+            background-image: url('./assets/attribute-unrelated.svg');
+        }
+    }
+}

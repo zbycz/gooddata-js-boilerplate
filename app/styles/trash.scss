@@ -1,0 +1,57 @@
+@import "variables";
+
+.adi-shortcut.adi-trash {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+
+    background: rgba(237,246,253,0.85);
+    border: 3px dashed $adi-dropzone-active-color;
+    border-radius: 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+
+    .adi-trash-inner {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+
+        border-radius: 7px;
+    }
+
+    p {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        width: 100%;
+        margin: -70px 0 0 0;
+    }
+
+    p:before {
+        display: block;
+        content: '\e61a'; // trash icon
+        font-family: Indigo;
+        font-size: 50px;
+        line-height: 80px;
+        color: $adi-dropzone-active-color;
+    }
+
+    &.adi-droppable-hover {
+        box-shadow: none;
+
+        &, p:before {
+            color: #ffffff
+        }
+
+        .adi-trash-inner {
+            background: $adi-dropzone-active-color;
+        }
+    }
+}

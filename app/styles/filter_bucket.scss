@@ -1,0 +1,161 @@
+@import "variables";
+
+.adi-filter-bucket {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+
+    padding: 0 5px;
+    margin: 0;
+
+    border-radius: $adi-bucket-border-radius;
+    border: 1px solid $adi-bucket-border-color;
+
+    background: $adi-bucket-background-color;
+    box-shadow: $adi-bucket-box-shadow;
+
+    .adi-bucket-item {
+        margin: 3px 0;
+        padding: 0;
+        border: 0;
+    }
+
+    h2, ul {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    h2 {
+        box-sizing: border-box;
+
+        width: 60px;
+        margin: 0;
+        padding: 0 0 0 6px;
+
+        font-size: 11px;
+        text-transform: uppercase;
+        color: $gd-color-state-blank;
+    }
+
+    ul {
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 0;
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .adi-bucket-invitation {
+        width: 194px;
+
+        margin: 4px 0;
+        padding: 3px;
+    }
+
+    .adi-bucket-invitation-outer {
+        padding: 0;
+    }
+}
+
+.adi-filter-button {
+    position: relative;
+    max-width: 250px;
+    padding: 4px 28px 4px 45px;
+
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    font-size: 12px;
+    line-height: 18px;
+    white-space: nowrap;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+
+        margin-left: 10px;
+        padding-top: inherit;
+        padding-bottom: inherit;
+
+        font-size: 13px;
+        // important is needed to overload .button-dropdown styles
+        color: #94A1AD !important;
+        line-height: inherit;
+    }
+
+    .button-text {
+        display: block;
+        max-width: none;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            left: 20px;
+            bottom: 0;
+            width: 18px;
+
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &.adi-filter-button-hover, &.adi-dragged-item, &.is-active {
+        // show the dragging icon
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 4px;
+            left: 0;
+            width: 20px;
+            height: 14px;
+
+            margin-top: 2px;
+
+            background: url('./assets/icon-drag-field.svg') repeat-y center top;
+        }
+    }
+
+    &.adi-filter-button-hover, &.adi-dragged-item {
+        background: rgba(255,255,255,0.95);
+        border-color: rgba(201,213,224,0.50);
+        box-shadow: 0px 1px 3px 0px rgba(20,56,93,0.10), 0px 2px 9px 0px rgba(20,56,93,0.15);
+    }
+
+    &.is-active {
+        background: rgba(255,255,255,0.85);
+        border-color: rgba(31,52,73,0.20);
+        box-shadow: inset 0px 1px 0px 0px rgba(177,193,209,0.35);
+    }
+
+    .adi-attribute-filter-label {
+        overflow: hidden;
+
+        .label {
+            max-width: none;
+        }
+    }
+}
+
+.adi-date-filter-button .button-text:before {
+    margin-top: -2px;
+    background-image: url('./assets/date.svg');
+}
+
+.adi-attr-filter-button .button-text:before {
+    background-image: url('./assets/attribute.svg');
+}

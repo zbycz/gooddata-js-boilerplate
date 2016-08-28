@@ -1,0 +1,1 @@
+export const ITEM_TRANSLATION_KEY = '_TRANSLATION_KEY';

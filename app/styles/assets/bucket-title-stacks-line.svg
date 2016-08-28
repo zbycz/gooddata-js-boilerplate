@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15857) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="03-3--chart-type" sketch:type="MSArtboardGroup" transform="translate(-251.000000, -558.000000)" stroke-linecap="round" stroke-width="2">
+            <g id="Toolbars" sketch:type="MSLayerGroup" transform="translate(243.000000, 102.000000)">
+                <g id="attributes" transform="translate(0.000000, 448.000000)" sketch:type="MSShapeGroup">
+                    <g id="top">
+                        <g id="icon" transform="translate(9.000000, 9.000000)">
+                            <path d="M0.941176471,10.6665365 C2.98018188,11.9766159 4.25171383,12.5229393 6.34994971,11.3717928 C10.3820703,9.15966727 10.1936315,5.32972132 16,4" id="Path-3" stroke="#B0BECA"></path>
+                            <path d="M0.941176471,7.79994457 C0.941176471,7.79994457 3.238238,1.55149694 6.03769613,2.02568579 C8.83715427,2.49987464 8.65264906,8.39798238 11.0195037,9.50707151 C13.3863583,10.6161606 16,9.50707147 16,9.50707147" id="Path-1" stroke-opacity="0.6" stroke="#B0BECA"></path>
+                            <path d="M0,2.87905569 C2.21555116,5.77450464 2.86214196,6.00000072 5.56857933,6 C7.60390412,5.99999945 10.0678773,2.94069642 12.355653,1.17034621 C14.6434286,-0.600004006 16,0.163937009 16,0.163937009" id="Path-2" stroke="#94A1AD"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
