@@ -10,10 +10,10 @@ module.exports = function createDevConfig(config) {
         devtool: 'cheap-inline-source-map',
 
         output: {
-            path: path.join(__dirname, 'analyze'),
+            path: path.join(__dirname, 'GDC_APP_PATH'),
             // Specify complete path to force
             // chrome/FF load the images
-            publicPath: `${root}/analyze/`,
+            publicPath: `${root}/GDC_APP_PATH/`,
             filename: '[name].js'
         }
     });
@@ -42,13 +42,13 @@ module.exports = function createDevConfig(config) {
             PRODUCTION: false
         }),
         new HtmlWebpackPlugin({
-            title: 'Analyze',
+            title: 'GDC_APP_NAME',
             template: 'index.webpack.html',
             ga: 'UA-3766725-6',
             embedded: false
         }),
         new HtmlWebpackPlugin({
-            title: 'Analyze - Embedded',
+            title: 'GDC_APP_NAME - Embedded',
             template: 'index.webpack.html',
             ga: 'UA-3766725-6',
             embedded: true,

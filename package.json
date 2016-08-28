@@ -1,11 +1,11 @@
 {
   "private": true,
-  "name": "gdc-analytical-designer",
-  "version": "0.0.2",
-  "description": "New Gooddata Analytical Designer",
+  "name": "GDC_APP_NAME",
+  "version": "0.0.1",
+  "description": "",
   "repository": {
     "type": "git",
-    "url": "git@github.com:gooddata/gdc-analytical-designer.git"
+    "url": "git@github.com:gooddata/GDC_REPO_NAME.git"
   },
   "main": "index.html",
   "scripts": {

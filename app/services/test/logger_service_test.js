@@ -53,7 +53,7 @@ describe('logger service', () => {
                 ...commonDimensions,
 
                 hitType: 'event',
-                eventCategory: 'analyticalDesigner',
+                eventCategory: 'GDC_APP_GA_PAGE',
                 eventAction: action,
                 eventLabel: label,
                 eventValue: value
@@ -116,7 +116,7 @@ describe('logger service', () => {
             const callArgs = logStub.getCall(0).args[0];
             expect(callArgs).to.include({
                 hitType: 'timing',
-                timingCategory: 'analyticalDesigner',
+                timingCategory: 'GDC_APP_GA_PAGE',
                 timingVar: variable,
                 timingValue: value,
                 timingLabel: label

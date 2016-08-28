@@ -17,7 +17,7 @@ else
 fi
 
 # Compress content of this git repository into tar with format: {name}.tag.gz
-tar czf gdc-analytical-designer.tar.gz $(git ls-tree --name-only HEAD) .git
+tar czf GDC_REPO_NAME.tar.gz $(git ls-tree --name-only HEAD) .git
 
 # Create RPM
 rpmbuild -bb \
@@ -26,4 +26,4 @@ rpmbuild -bb \
     --define "_sourcedir $PWD" \
     --define "_rpmfilename %{NAME}-%{VERSION}-%{RELEASE}.%{ARCH}.rpm" \
     --define "gdcversion $VERSION" \
-    specs/gdc-analytical-designer.spec
+    specs/GDC_REPO_NAME.spec

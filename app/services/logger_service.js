@@ -76,7 +76,7 @@ const send = fieldsObject => logToGA('send', fieldsObject);
 export const sendLogEvent = (state, { action, label, value, ...rest }, logFn = send) =>
     logFn(enrichWithCustomDimensions(state, {
         hitType: 'event',
-        eventCategory: 'analyticalDesigner',
+        eventCategory: 'GDC_APP_GA_PAGE',
         eventAction: action,
         eventLabel: label,
         eventValue: value, // integer
@@ -88,8 +88,8 @@ export const sendLogPageView = (state, options = { page: '' }, logFn = send) => 
 
     logFn(enrichWithCustomDimensions(state, {
         hitType: 'pageview',
-        title: 'analytical designer',
-        page: `${(isEmbedded ? '/insights-embed' : '/insights')}${options.page}/`,
+        title: 'GDC_APP_NAME',
+        page: `${(isEmbedded ? '/GDC_APP_GA_PAGE-embed' : '/GDC_APP_GA_PAGE')}${options.page}/`,
         location: options.location // [optional]
     }));
 };
@@ -97,7 +97,7 @@ export const sendLogPageView = (state, options = { page: '' }, logFn = send) => 
 export const sendLogTiming = (state, { label, value, variable }, logFn = send) =>
     logFn(omitBy({
         hitType: 'timing',
-        timingCategory: 'analyticalDesigner',
+        timingCategory: 'GDC_APP_GA_PAGE',
         timingVar: variable,
         timingValue: value,
         timingLabel: label

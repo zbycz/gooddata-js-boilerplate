@@ -28,7 +28,7 @@ export default fromJS({
             }
         },
         errors: [],
-        pageTitle: 'Analyze',
+        pageTitle: 'GDC_APP_NAME',
         meta: {
             device: {
                 viewport: '0x0',

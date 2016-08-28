@@ -2,9 +2,10 @@
 
 After creating copy, replace the following placeholders:
 
-GDC_APP_NAME (eg. 'Indigo Analytical Designer')
-GDC_APP_PATH (eg. 'analyze')
-GDC_APP_GA_PAGE (eg. 'insights')
+- GDC_APP_NAME (eg. 'Indigo Analytical Designer')
+- GDC_APP_PATH (eg. 'analyze')
+- GDC_APP_GA_PAGE (eg. 'insights')
+- GDC_REPO_NAME (eg. 'gdc-analytical-designer')
 
 # GDC_APP_NAME
 
@@ -32,13 +33,13 @@ $ npm install
 ```
 
 #### Supported versions:
-![supported versions](http://client-demo.na.intgdc.com:50480/badge?repo=gdc-analytical-designer)
+![supported versions](http://client-demo.na.intgdc.com:50480/badge?repo=GDC_REPO_NAME)
 
 ## Develop
 Run the app with ```grunt dev```
 
-To run the standard application, open **https://localhost:8443/analyze/** in your favorite browser. To run
-the embedded version, open **https://localhost:8443/analyze/embedded**.
+To run the standard application, open **https://localhost:8443/GDC_APP_PATH/** in your favorite browser. To run
+the embedded version, open **https://localhost:8443/GDC_APP_PATH/embedded**.
 
 In each case a development proxy will be started, which allows the app to communicate
 with [secure.gooddata.com](https://secure.gooddata.com).

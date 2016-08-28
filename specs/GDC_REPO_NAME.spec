@@ -1,13 +1,13 @@
 %global gdc_prefix /opt
 
-Name:           gdc-analytical-designer
+Name:           GDC_REPO_NAME
 Version:        3.%{gdcversion}
 Release:        1%{dist}
-Summary:        Indigo Analytical Designer
+Summary:        GDC_APP_NAME
 
 Group:          Applications/Productivity
 License:        Proprietary
-URL:            https://github.com/gooddata/gdc-analytical-designer
+URL:            https://github.com/gooddata/GDC_REPO_NAME
 Source0:        %{name}.tar.gz
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -29,9 +29,9 @@ grunt dist
 %install
 rm -rf $RPM_BUILD_ROOT
 
-mkdir -p $RPM_BUILD_ROOT%{gdc_prefix}/analyze/
+mkdir -p $RPM_BUILD_ROOT%{gdc_prefix}/GDC_APP_PATH/
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/httpd/conf.d
-cp -a dist/* $RPM_BUILD_ROOT%{gdc_prefix}/analyze/
+cp -a dist/* $RPM_BUILD_ROOT%{gdc_prefix}/GDC_APP_PATH/
 
 # httpd configuration
 install -d $RPM_BUILD_ROOT%{_sysconfdir}/httpd/conf.d
@@ -44,7 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(0644,root,root,0755)
 %{_sysconfdir}/httpd/conf.d/*
-%dir %{gdc_prefix}/analyze
-%{gdc_prefix}/analyze/*
+%dir %{gdc_prefix}/GDC_APP_PATH
+%{gdc_prefix}/GDC_APP_PATH/*
 
 %changelog
