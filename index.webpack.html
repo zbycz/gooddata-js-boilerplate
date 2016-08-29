@@ -11,10 +11,6 @@
     <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet" />
     {% } %}
 
-    {% if (o.htmlWebpackPlugin.options.embedded) { %}
-    <script type="text/javascript">window.EMBEDDED={%=o.htmlWebpackPlugin.options.embedded%}</script>
-    {% } %}
-
     {% if (o.htmlWebpackPlugin.options.ga) { %}
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

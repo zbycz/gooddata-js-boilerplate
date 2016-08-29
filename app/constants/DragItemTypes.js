@@ -1,2 +1,0 @@
-export const CATALOGUE_LIST_ITEM = 'CATALOGUE_LIST_ITEM';
-export const BUCKET_ITEM = 'BUCKET_ITEM';

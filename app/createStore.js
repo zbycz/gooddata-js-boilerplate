@@ -1,10 +1,12 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
-import rootReducer from './reducers/root_reducer';
-import initialState from './reducers/initial_state';
-
-import * as Paths from './constants/StatePaths';
+const appReducer = (state, action) => {
+    switch (action.type) {
+        default:
+            return state;
+    }
+};
 
 const middleware = [thunk];
 
@@ -19,6 +21,6 @@ const enhancer = compose(
     DEBUG && window.devToolsExtension ? window.devToolsExtension() : f => f
 );
 
-export default function(reducer = rootReducer) {
-    return createStore(reducer, initialState.setIn(Paths.IS_EMBEDDED, window.EMBEDDED || false), enhancer);
+export default function(reducer = appReducer) {
+    return createStore(reducer, {}, enhancer);
 }

@@ -124,8 +124,7 @@ module.exports = function getWebpackConfig(type) {
                 'jquery-browser': path.join(__dirname, 'node_modules/jquery.browser/dist/jquery.browser'),
                 'jquery-extensions': path.join(__dirname, 'node_modules/goodstrap/packages/core/jquery-extensions'),
                 'picker': path.join(__dirname, 'node_modules/pickadate/lib/picker'),
-                'pickadate': path.join(__dirname, 'node_modules/pickadate/lib/picker.date'),
-                'react-dnd-touch-backend': path.join('react-dnd-touch-backend/src/Touch.js')
+                'pickadate': path.join(__dirname, 'node_modules/pickadate/lib/picker.date')
             }
         },
 

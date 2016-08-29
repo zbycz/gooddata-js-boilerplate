@@ -69,15 +69,7 @@ distConfig.plugins = distConfig.plugins.concat(
     new HtmlWebpackPlugin({
         title: 'GDC_APP_NAME',
         template: 'index.webpack.html',
-        ga: 'UA-3766725-14',
-        embedded: false
-    }),
-    new HtmlWebpackPlugin({
-        title: 'GDC_APP_NAME - Embedded',
-        template: 'index.webpack.html',
-        ga: 'UA-3766725-14',
-        embedded: true,
-        filename: 'embedded/index.html'
+        ga: 'UA-3766725-14'
     }),
 
     new CompressionPlugin({
