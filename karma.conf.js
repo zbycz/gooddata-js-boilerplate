@@ -1,6 +1,7 @@
 /* eslint object-shorthand: 0 */
+/* eslint max-len: 0 */
 
-const webpackTestConfig = require('./webpack.test.config.js');
+const webpackTestConfig = require('./webpack.test.config');
 const _ = require('lodash');
 
 module.exports = config => {

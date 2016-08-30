@@ -1,6 +1,8 @@
 // use import syntax instead of require, babel implementations are different
+/* eslint import/imports-first: 0 */
 import 'babel-polyfill';
-require('./styles/app');
+
+require('./styles/app.scss');
 
 import * as React from 'react';
 import ReactDOM from 'react-dom';
@@ -15,6 +17,7 @@ const store = createStore();
 if (DEBUG) {
     const Immutable = require('immutable');
     const installDevTools = require('immutable-devtools');
+
     installDevTools(Immutable);
 }
 
@@ -35,7 +38,8 @@ function renderApplication() {
 if (!window.Intl) {
     require.ensure(['intl', 'intl/locale-data/jsonp/en.js'], () => {
         require('intl');
-        require('intl/locale-data/jsonp/en.js');
+        require('intl/locale-data/jsonp/en');
+
         renderApplication();
     });
 } else {

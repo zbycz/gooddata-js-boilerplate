@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const webpack = require('webpack');
-const getWebpackConfig = require('./webpack.config.js');
+const getWebpackConfig = require('./webpack.config');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = function createTestConfig(options) {

@@ -1,7 +1,7 @@
 // Copyright (C) 2007-2016, GoodData(R) Corporation. All rights reserved.
-const webpackDistConfig = require('./webpack.dist.config.js');
-const webpackDevConfig = require('./webpack.dev.config.js');
-const webpackTestConfig = require('./webpack.test.config.js');
+const webpackDistConfig = require('./webpack.dist.config');
+const webpackDevConfig = require('./webpack.dev.config');
+const webpackTestConfig = require('./webpack.test.config');
 
 module.exports = grunt => {
     grunt.loadNpmTasks('grunt-webpack');
@@ -87,7 +87,8 @@ module.exports = grunt => {
     grunt.registerTask('test', ['karma:unit']);
 
     grunt.registerMultiTask('server', () => {
-        const middlewareFactory = require('./server.js');
+        const middlewareFactory = require('./server');
+
         const currentTask = grunt.task.current;
         const done = currentTask.async();
         const Grizzly = require('grunt-grizzly');

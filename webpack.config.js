@@ -1,3 +1,4 @@
+/* eslint max-len: 0 */
 const path = require('path');
 const webpack = require('webpack');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
@@ -115,22 +116,22 @@ module.exports = function getWebpackConfig(type) {
                 path.join('node_modules/goodstrap/packages')
             ],
             alias: {
-                'react': path.join(__dirname, 'node_modules/react/'),
+                react: path.join(__dirname, 'node_modules/react/'),
                 'js-utils': path.join(__dirname, 'node_modules/js-utils/'),
-                'gooddata': path.join(__dirname, 'node_modules/gooddata/src/gooddata'),
-                'immutable': path.join(__dirname, 'node_modules/immutable/dist/immutable'),
-                'lodash': path.join(__dirname, 'node_modules/lodash'),
-                'jquery': path.join(__dirname, 'node_modules/jquery/dist/jquery'),
+                gooddata: path.join(__dirname, 'node_modules/gooddata/src/gooddata'),
+                immutable: path.join(__dirname, 'node_modules/immutable/dist/immutable'),
+                lodash: path.join(__dirname, 'node_modules/lodash'),
+                jquery: path.join(__dirname, 'node_modules/jquery/dist/jquery'),
                 'jquery-browser': path.join(__dirname, 'node_modules/jquery.browser/dist/jquery.browser'),
                 'jquery-extensions': path.join(__dirname, 'node_modules/goodstrap/packages/core/jquery-extensions'),
-                'picker': path.join(__dirname, 'node_modules/pickadate/lib/picker'),
-                'pickadate': path.join(__dirname, 'node_modules/pickadate/lib/picker.date')
+                picker: path.join(__dirname, 'node_modules/pickadate/lib/picker'),
+                pickadate: path.join(__dirname, 'node_modules/pickadate/lib/picker.date')
             }
         },
 
         plugins: [
             new webpack.NormalModuleReplacementPlugin(/\/\w+\/styles\/themes\//, requestObject => {
-                requestObject.request = requestObject.request.replace(/.*\/(\w+)\/styles\/themes\/(.*)/, '../../node_modules/goodstrap/packages/$1/styles/themes/$2');
+                requestObject.request = requestObject.request.replace(/.*\/(\w+)\/styles\/themes\/(.*)/, '../../node_modules/goodstrap/packages/$1/styles/themes/$2'); // eslint-disable-line no-param-reassign
             }),
             new webpack.NormalModuleReplacementPlugin(/^\$$/, 'jquery'),
             new webpack.NormalModuleReplacementPlugin(/^jQuery$/, 'jquery'),

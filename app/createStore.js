@@ -12,6 +12,7 @@ const middleware = [thunk];
 
 if (DEBUG || TESTING) {
     const fsaMiddleware = require('redux-validate-fsa');
+
     const fsa = fsaMiddleware();
     middleware.push(fsa);
 }
