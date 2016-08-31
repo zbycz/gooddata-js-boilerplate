@@ -1,14 +1,11 @@
-// use import syntax instead of require, babel implementations are different
-/* eslint import/imports-first: 0 */
 import 'babel-polyfill';
-
-require('./styles/app.scss');
-
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
 import { IntlProvider } from 'react-intl';
 import { Provider } from 'react-redux';
+
+import './styles/app.scss';
 
 import createStore from './createStore';
 
