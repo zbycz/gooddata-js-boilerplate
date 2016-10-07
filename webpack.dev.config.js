@@ -1,12 +1,13 @@
-/* eslint max-len: 0 */
 const _ = require('lodash');
 const path = require('path');
 const webpack = require('webpack');
+const ip = require('ip');
 const getWebpackConfig = require('./webpack.config');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function createDevConfig(config) {
-    const root = `https://localhost:${config.port}`;
+    const serverIp = config.public ? ip.address() : 'localhost';
+    const root = `https://${serverIp}:${config.port}`;
     const devConfig = _.assign(getWebpackConfig(), {
         devtool: 'cheap-inline-source-map',
 
@@ -30,7 +31,8 @@ module.exports = function createDevConfig(config) {
 
     devConfig.module.loaders.forEach(loaderDef => {
         if (loaderDef.test.toString().indexOf('.js') > 0) {
-            loaderDef.loader = `react-hot!${loaderDef.loader}`; // eslint-disable-line no-param-reassign
+            // eslint-disable-next-line no-param-reassign
+            loaderDef.loader = `react-hot!${loaderDef.loader}`;
         }
     });
 

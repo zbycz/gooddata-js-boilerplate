@@ -18,6 +18,7 @@ module.exports = grunt => {
             dist: 'dist',
             host: grunt.option('backend') || 'secure.gooddata.com',
             port: grunt.option('port') || 8443,
+            public: grunt.option('public') || false,
             webpackOptions: {
                 progress: true,
                 colors: true,
@@ -98,7 +99,8 @@ module.exports = grunt => {
 
         const options = {
             stub: middlewareFactory.createMiddleware(webpackConfig({
-                port: grunt.config.get('main.port')
+                port: grunt.config.get('main.port'),
+                public: grunt.config.get('main.public')
             }), webpackOptions),
             keepAlive: true,
             quiet: false,

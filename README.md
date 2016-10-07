@@ -47,6 +47,7 @@ with [secure.gooddata.com](https://secure.gooddata.com).
 
 - `--host` or `--backend` defaults to `secure.gooddata.com` and specifies which backend to proxy HTTP requests to.
 - `--port` defaults to `8443` and specifies which local port number will be used.
+- `--public` defaults to false and enables remote access to development build.
 
 Grunt will watch for changes in packages, pre-compile CSS, pre-compile handlebars templates.
 
