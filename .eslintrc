@@ -1,3 +1,7 @@
 {
-    "extends": "gooddata"
+    "extends": "gooddata",
+
+    "rules": {
+        "class-methods-use-this": 0
+    }
 }

@@ -1,0 +1,25 @@
+{
+    "presets": [
+      [ "es2015", { "modules": false } ],
+      "react",
+      "stage-2"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ],
+    "env": {
+      "test": {
+        "presets": [
+          "es2015", // jest needs commonjs modules
+          "react",
+          "stage-2"
+        ]
+      },
+      "development": { // babel-lodash-plugin doesnt't work with jest code coverage
+        "plugins": [
+          "lodash",
+          "react-hot-loader/babel"
+        ]
+      }
+    }
+}

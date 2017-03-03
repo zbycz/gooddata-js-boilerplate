@@ -1,5 +1,4 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
 
 const appReducer = (state, action) => {
     switch (action.type) {
@@ -8,17 +7,17 @@ const appReducer = (state, action) => {
     }
 };
 
-const middleware = [thunk];
+const middlewares = [];
 
 if (DEBUG || TESTING) {
     const fsaMiddleware = require('redux-validate-fsa');
 
     const fsa = fsaMiddleware();
-    middleware.push(fsa);
+    middlewares.push(fsa);
 }
 
 const enhancer = compose(
-    applyMiddleware(...middleware),
+    applyMiddleware(...middlewares),
     DEBUG && window.devToolsExtension ? window.devToolsExtension() : f => f
 );
 

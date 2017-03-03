@@ -1,0 +1,25 @@
+@import '~@gooddata/react-components/styles/scss/table.scss';
+@import '~@gooddata/react-components/styles/scss/charts.scss';
+
+html {
+    height: 100%;
+}
+
+body {
+    // avoid FF flash of unstyled content
+    display: block !important;
+    min-width: 1100px;
+    height: 100%;
+
+    font-family: "Avenir", "Helvetica Neue", Arial, sans-serif;
+
+    background: #FCFCFD;
+}
+
+.loading {
+    height: 100%;
+    width: 100%;
+    background: url('./assets/computing.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
