@@ -18,7 +18,7 @@ $ yarn install --pure-lockfile
 ## Develop
 Run the app with ```grunt dev```
 
-To run the standard application, open **https://localhost:8443/GDC_APP_PATH/** in your favorite browser.
+To run the standard application, open **https://localhost:8443/app/** in your favorite browser.
 
 In each case a development proxy will be started, which allows the app to communicate
 with [secure.gooddata.com](https://secure.gooddata.com).
