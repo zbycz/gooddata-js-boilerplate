@@ -12,32 +12,26 @@ module.exports = function createDevConfig(config) {
         devtool: 'cheap-inline-source-map',
 
         output: {
-            path: path.join(__dirname, 'GDC_APP_PATH'),
+            path: path.join(__dirname, 'app'),
             // Specify complete path to force
             // chrome/FF load the images
-            publicPath: `${root}/GDC_APP_PATH/`,
+            publicPath: `${root}/app/`,
             filename: '[name].js'
         }
     });
 
-    _.keysIn(devConfig.entry).forEach(key => {
+    _.keysIn(devConfig.entry).forEach((key) => {
         const currentValue = devConfig.entry[key];
 
-        devConfig.entry[key] = currentValue.concat(
-            'webpack/hot/dev-server',
-            `webpack-hot-middleware/client?${root}`
-        );
-    });
-
-    devConfig.module.loaders.forEach(loaderDef => {
-        if (loaderDef.test.toString().indexOf('.js') > 0) {
-            // eslint-disable-next-line no-param-reassign
-            loaderDef.loader = `react-hot!${loaderDef.loader}`;
-        }
+        devConfig.entry[key] = [
+            'react-hot-loader/patch',
+            'webpack/hot/only-dev-server',
+            `webpack-hot-middleware/client?${root}`,
+            ...currentValue
+        ];
     });
 
     devConfig.plugins = devConfig.plugins.concat(
-        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             DEBUG: true,
@@ -45,9 +39,8 @@ module.exports = function createDevConfig(config) {
             PRODUCTION: false
         }),
         new HtmlWebpackPlugin({
-            title: 'GDC_APP_NAME',
-            template: 'index.webpack.html',
-            ga: 'UA-3766725-6'
+            title: 'App',
+            template: 'index.webpack.html'
         })
     );
 

@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
     createMiddleware: function createMiddleware(webpackConfig, webpackOptions) {
-        return app => {
+        return (app) => {
             const compiler = webpack(webpackConfig);
 
             app.use(webpackDevMiddleware(compiler, webpackOptions));

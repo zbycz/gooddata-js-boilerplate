@@ -1,5 +1,4 @@
 node_modules
 dist
-ci/results
 .idea
 .DS_Store

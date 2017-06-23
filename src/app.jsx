@@ -1,9 +1,11 @@
 import 'babel-polyfill';
-import * as React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { IntlProvider } from 'react-intl';
 import { Provider } from 'react-redux';
+import { AppContainer } from 'react-hot-loader';
+
+import Root from './containers/Root';
 
 import './styles/app.scss';
 
@@ -18,18 +20,26 @@ if (DEBUG) {
     installDevTools(Immutable);
 }
 
-function renderApplication() {
+function renderApplication(RootComponent) {
     ReactDOM.render(
-        <Provider store={store}>
-            <IntlProvider locale="en">
-                <div>Hello world!</div>
-            </IntlProvider>
-        </Provider>,
-        document.getElementById('app-GDC_APP_PATH')
+        <AppContainer>
+            <Provider store={store}>
+                <IntlProvider locale="en">
+                    <RootComponent />
+                </IntlProvider>
+            </Provider>
+        </AppContainer>,
+        document.getElementById('app')
     );
 }
 
-// Load Intl polyfill only if needed
+if (module.hot) {
+    module.hot.accept('./containers/Root', () => {
+        renderApplication(Root);
+    });
+}
+
+// Load Intl polyfill only if needed (e.g. old Safari)
 // see http://ianobermiller.com/blog/2015/06/01/conditionally-load-intl-polyfill-webpack/
 // and https://webpack.github.io/docs/code-splitting.html
 if (!window.Intl) {
@@ -37,8 +47,8 @@ if (!window.Intl) {
         require('intl');
         require('intl/locale-data/jsonp/en');
 
-        renderApplication();
+        renderApplication(Root);
     });
 } else {
-    renderApplication();
+    renderApplication(Root);
 }

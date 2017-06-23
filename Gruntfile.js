@@ -1,11 +1,9 @@
 // Copyright (C) 2007-2016, GoodData(R) Corporation. All rights reserved.
 const webpackDistConfig = require('./webpack.dist.config');
 const webpackDevConfig = require('./webpack.dev.config');
-const webpackTestConfig = require('./webpack.test.config');
 
-module.exports = grunt => {
+module.exports = (grunt) => {
     grunt.loadNpmTasks('grunt-webpack');
-    grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('gruntify-eslint');
     grunt.loadNpmTasks('grunt-grizzly');
@@ -22,7 +20,7 @@ module.exports = grunt => {
             webpackOptions: {
                 progress: true,
                 colors: true,
-                publicPath: '/GDC_APP_PATH/',
+                publicPath: '/app/',
                 keepAlive: true,
                 stats: {
                     hash: false,
@@ -48,14 +46,6 @@ module.exports = grunt => {
             dist: './dist'
         },
 
-        karma: {
-            options: {
-                configFile: 'karma.conf.js',
-                singleRun: grunt.option('ci')
-            },
-            unit: {}
-        },
-
         eslint: {
             options: {
                 config: '.eslintrc'
@@ -64,8 +54,7 @@ module.exports = grunt => {
                 src: [
                     '**/*.{js,jsx}',
                     '!dist/**/*',
-                    '!node_modules/**/*',
-                    '!ci/**/*'
+                    '!node_modules/**/*'
                 ]
             }
         },
@@ -78,14 +67,8 @@ module.exports = grunt => {
         server: {
             dev: {},
             test: {}
-        },
-
-        test: {
-            unit: {}
         }
     });
-
-    grunt.registerTask('test', ['karma:unit']);
 
     grunt.registerMultiTask('server', () => {
         const middlewareFactory = require('./server');
@@ -94,11 +77,10 @@ module.exports = grunt => {
         const done = currentTask.async();
         const Grizzly = require('grunt-grizzly');
 
-        const webpackConfig = currentTask.target === 'dev' ? webpackDevConfig : webpackTestConfig;
         const webpackOptions = grunt.config.get('main.webpackOptions');
 
         const options = {
-            stub: middlewareFactory.createMiddleware(webpackConfig({
+            stub: middlewareFactory.createMiddleware(webpackDevConfig({
                 port: grunt.config.get('main.port'),
                 public: grunt.config.get('main.public')
             }), webpackOptions),
@@ -112,7 +94,7 @@ module.exports = grunt => {
         const grizzly = new Grizzly(options);
 
         // Shutdown & notify on error
-        grizzly.on('error', error => {
+        grizzly.on('error', (error) => {
             grunt.log.error('Grizzly error: %s', error);
             grunt.log.error('Stopping task grizzly');
 
