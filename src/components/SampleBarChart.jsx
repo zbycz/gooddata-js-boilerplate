@@ -9,7 +9,7 @@ export default class SampleBarChart extends PureComponent {
     static propTypes = {
         height: PropTypes.number.isRequired,
         width: PropTypes.number.isRequired
-    }
+    };
 
     constructor(props) {
         super(props);
@@ -52,7 +52,8 @@ export default class SampleBarChart extends PureComponent {
                     ],
                     attributes: [
                         {
-                            id: catalog['Activity Type']
+                            id: catalog['Activity Type'],
+                            type: 'attribute'
                         }
                     ]
                 }}

@@ -52,7 +52,8 @@ export default class SampleTable extends PureComponent {
                     ],
                     attributes: [
                         {
-                            id: catalog['Activity Type']
+                            id: catalog['Activity Type'],
+                            type: 'attribute'
                         }
                     ]
                 }}
