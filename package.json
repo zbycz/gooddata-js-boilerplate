@@ -70,7 +70,7 @@
   },
   "dependencies": {
     "@gooddata/data-layer": "0.0.22",
-    "@gooddata/react-components": "0.0.3",
+    "@gooddata/react-components": "0.0.5",
     "classnames": "2.2.5",
     "gooddata": "1.7.0",
     "intl": "1.2.5",
