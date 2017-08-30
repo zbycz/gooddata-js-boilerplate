@@ -1,8 +1,10 @@
 import React, { PropTypes, PureComponent } from 'react';
-import { BarChart } from '@gooddata/react-components';
+import { AfmComponents } from '@gooddata/react-components';
 
 import catalog from '../catalog';
 import { projectId } from '../config.json';
+
+const { BarChart } = AfmComponents;
 
 export default class SampleBarChart extends PureComponent {
 

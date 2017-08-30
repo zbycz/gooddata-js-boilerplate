@@ -1,8 +1,10 @@
 import React, { PropTypes, PureComponent } from 'react';
-import { Table } from '@gooddata/react-components';
+import { AfmComponents } from '@gooddata/react-components';
 
 import catalog from '../catalog';
 import { projectId } from '../config.json';
+
+const { Table } = AfmComponents;
 
 export default class SampleTable extends PureComponent {
 
