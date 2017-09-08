@@ -1,8 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { BarChart } from '@gooddata/react-components';
+import { AfmComponents } from '@gooddata/react-components';
 
 import SampleBarChart from '../SampleBarChart';
+
+const { BarChart } = AfmComponents;
 
 describe('SampleBarChart', () => {
     it('should render bar chart', () => {
