@@ -2,23 +2,24 @@
 # yarn lockfile v1
 
 
-"@gooddata/data-layer@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@gooddata/data-layer/-/data-layer-2.0.2.tgz#dee93f055434af82428cd89baa3e82f34ad87f26"
+"@gooddata/data-layer@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/data-layer/-/data-layer-3.0.0.tgz#eeaaf0b43dc9d2b1d560a9503960a27cf20e163a"
   dependencies:
     json-stable-stringify "1.0.1"
     lodash "4.17.4"
 
-"@gooddata/goodstrap@50.0.0":
-  version "50.0.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-50.0.0.tgz#4627ccb11f2c6cdb38aeae228612d3df92492568"
+"@gooddata/goodstrap@53.0.1":
+  version "53.0.1"
+  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-53.0.1.tgz#ec63334c3005d16ff2b29ea17beac74f54bdafe4"
   dependencies:
-    "@gooddata/js-utils" "0.7.0"
+    "@gooddata/js-utils" "0.7.1"
     classnames "2.2.5"
     custom-event "1.0.1"
     fixed-data-table-2 "0.7.13"
     foundation-sites "5.5.3"
     immutable "3.8.1"
+    invariant "2.2.2"
     jquery "2.1.4"
     kefir "3.7.1"
     lodash "4.17.4"
@@ -26,32 +27,6 @@
     moment-timezone "0.5.11"
     react-day-picker "3.1.1"
     react-dnd "2.1.4"
-    react-dnd-touch-backend gooddata/react-dnd-touch-backend#v0.0.1
-    react-document-title "2.0.3"
-    react-intl "2.2.3"
-    react-native-listener "1.0.2"
-    react-portal "3.0.0"
-    react-responsive "1.2.6"
-    react-textarea-autosize "4.0.5"
-
-"@gooddata/goodstrap@51.0.0":
-  version "51.0.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/goodstrap/-/goodstrap-51.0.0.tgz#88fd475d23d0399efe713a9ea66994fabd775199"
-  dependencies:
-    "@gooddata/js-utils" "0.7.0"
-    classnames "2.2.5"
-    custom-event "1.0.1"
-    fixed-data-table-2 "0.7.13"
-    foundation-sites "5.5.3"
-    immutable "3.8.1"
-    jquery "2.1.4"
-    kefir "3.7.1"
-    lodash "4.17.4"
-    moment "2.17.1"
-    moment-timezone "0.5.11"
-    react-day-picker "3.1.1"
-    react-dnd "2.1.4"
-    react-dnd-touch-backend gooddata/react-dnd-touch-backend#v0.0.1
     react-document-title "2.0.3"
     react-intl "2.2.3"
     react-native-listener "1.0.2"
@@ -60,12 +35,12 @@
     react-textarea-autosize "4.0.5"
     rxjs "5.4.3"
 
-"@gooddata/indigo-visualizations@0.11.1":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/indigo-visualizations/-/indigo-visualizations-0.11.1.tgz#66ed39e60393ceabb3dba385ee83056c45ad67b6"
+"@gooddata/indigo-visualizations@0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@gooddata/indigo-visualizations/-/indigo-visualizations-0.11.2.tgz#f5b038666b6d091646af93611c809c1230091dba"
   dependencies:
-    "@gooddata/goodstrap" "50.0.0"
-    "@gooddata/js-utils" "0.7.0"
+    "@gooddata/goodstrap" "53.0.1"
+    "@gooddata/js-utils" "0.7.1"
     "@gooddata/numberjs" "3.0.0"
     classnames "2.2.5"
     fixed-data-table-2 "0.7.13"
@@ -75,9 +50,9 @@
     react-intl "2.2.3"
     react-measure "1.3.1"
 
-"@gooddata/js-utils@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/js-utils/-/js-utils-0.7.0.tgz#1d9134db613eed461d33a5f4657592088b03d685"
+"@gooddata/js-utils@0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@gooddata/js-utils/-/js-utils-0.7.1.tgz#5b382dbf37b61b387951b8e58e8580f9f75a28ee"
   dependencies:
     js-cookie "2.1.4"
     lodash "4.17.4"
@@ -88,13 +63,13 @@
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.0.0.tgz#9d646f1f9c05614d18e08ac5024b2ba2f7139396"
 
-"@gooddata/react-components@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-2.0.0.tgz#52f0b70b7ab0919797d358ae76639d7811b8d652"
+"@gooddata/react-components@2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-2.1.1.tgz#fc832322643b21b3edf0b4460a34b2ff194efb14"
   dependencies:
-    "@gooddata/data-layer" "2.0.2"
-    "@gooddata/goodstrap" "51.0.0"
-    "@gooddata/indigo-visualizations" "0.11.1"
+    "@gooddata/data-layer" "3.0.0"
+    "@gooddata/goodstrap" "53.0.1"
+    "@gooddata/indigo-visualizations" "0.11.2"
     classnames "2.2.5"
     gooddata "3.0.0"
     lodash "4.17.4"
@@ -1970,7 +1945,7 @@ disposables@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/disposables/-/disposables-1.0.1.tgz#064727a25b54f502bd82b89aa2dfb8df9f1b39e3"
 
-dnd-core@^2.0.1, dnd-core@^2.5.1:
+dnd-core@^2.0.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/dnd-core/-/dnd-core-2.5.1.tgz#178f5ad6526ce02dd59508f115535f7bfc0ce94e"
   dependencies:
@@ -3246,10 +3221,6 @@ hoek@2.x.x:
 hoist-non-react-statics@^1.0.3:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
-
-hoist-non-react-statics@^2.1.0:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
 
 home-or-tmp@^2.0.0:
   version "2.0.0"
@@ -5558,13 +5529,6 @@ react-deep-force-update@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-2.1.1.tgz#8ea4263cd6455a050b37445b3f08fd839d86e909"
 
-"react-dnd-touch-backend@github:gooddata/react-dnd-touch-backend#v0.0.1":
-  version "0.0.1"
-  resolved "https://codeload.github.com/gooddata/react-dnd-touch-backend/tar.gz/6136545d1255c484739224525cb9beb2736e20e9"
-  dependencies:
-    invariant "^2.1.1"
-    react-dnd "^2.0.0"
-
 react-dnd@2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/react-dnd/-/react-dnd-2.1.4.tgz#dd2afeddddd5ff4507d795a5bd44361c84374c0f"
@@ -5573,17 +5537,6 @@ react-dnd@2.1.4:
     dnd-core "^2.0.1"
     invariant "^2.1.0"
     lodash "^4.2.0"
-
-react-dnd@^2.0.0:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/react-dnd/-/react-dnd-2.5.1.tgz#ecef1d9d8478cb76afd5975cd5123ef7c3bebfe5"
-  dependencies:
-    disposables "^1.0.1"
-    dnd-core "^2.5.1"
-    hoist-non-react-statics "^2.1.0"
-    invariant "^2.1.0"
-    lodash "^4.2.0"
-    prop-types "^15.5.10"
 
 react-document-title@2.0.3:
   version "2.0.3"
