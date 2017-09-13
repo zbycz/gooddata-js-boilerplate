@@ -1,6 +1,7 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { filtersReducer, REDUX_STATE_PATH } from '@gooddata/react-components/dist/redux';
 
-const appReducer = (state, action) => {
+const appReducer = (state = {}, action) => {
     switch (action.type) {
         default:
             return state;
@@ -21,6 +22,11 @@ const enhancer = compose(
     DEBUG && window.devToolsExtension ? window.devToolsExtension() : f => f
 );
 
-export default function(reducer = appReducer) {
+const rootReducer = combineReducers({
+    app: appReducer,
+    [REDUX_STATE_PATH]: filtersReducer
+});
+
+export default function(reducer = rootReducer) {
     return createStore(reducer, {}, enhancer);
 }
