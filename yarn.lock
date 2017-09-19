@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@gooddata/data-layer@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@gooddata/data-layer/-/data-layer-3.0.0.tgz#eeaaf0b43dc9d2b1d560a9503960a27cf20e163a"
+"@gooddata/data-layer@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@gooddata/data-layer/-/data-layer-3.1.1.tgz#77761144a66ab3841aae5c3278eca14330deef74"
   dependencies:
     json-stable-stringify "1.0.1"
     lodash "4.17.4"
@@ -35,9 +35,9 @@
     react-textarea-autosize "4.0.5"
     rxjs "5.4.3"
 
-"@gooddata/indigo-visualizations@0.11.2":
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/@gooddata/indigo-visualizations/-/indigo-visualizations-0.11.2.tgz#f5b038666b6d091646af93611c809c1230091dba"
+"@gooddata/indigo-visualizations@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/indigo-visualizations/-/indigo-visualizations-0.12.0.tgz#d4232800a4126d988def96e9a52f8567b4aa45f8"
   dependencies:
     "@gooddata/goodstrap" "53.0.1"
     "@gooddata/js-utils" "0.7.1"
@@ -63,18 +63,19 @@
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@gooddata/numberjs/-/numberjs-3.0.0.tgz#9d646f1f9c05614d18e08ac5024b2ba2f7139396"
 
-"@gooddata/react-components@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-2.1.1.tgz#fc832322643b21b3edf0b4460a34b2ff194efb14"
+"@gooddata/react-components@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-components/-/react-components-2.4.0.tgz#6d66adbae81e020a82c4eeaa89f7aa819dd7c630"
   dependencies:
-    "@gooddata/data-layer" "3.0.0"
+    "@gooddata/data-layer" "3.1.1"
     "@gooddata/goodstrap" "53.0.1"
-    "@gooddata/indigo-visualizations" "0.11.2"
+    "@gooddata/indigo-visualizations" "0.12.0"
     classnames "2.2.5"
-    gooddata "3.0.0"
+    gooddata "4.0.0"
     lodash "4.17.4"
     numeral "2.0.6"
     react-intl "2.2.3"
+    rxjs "5.4.3"
     uuid "3.0.1"
 
 abab@^1.0.3:
@@ -2995,9 +2996,9 @@ gooddata@1.7.0:
     lodash "4.17.4"
     md5 "2.2.1"
 
-gooddata@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gooddata/-/gooddata-3.0.0.tgz#15a4524f1e1be7ca698c2d7e0ac2564bf0c026cf"
+gooddata@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/gooddata/-/gooddata-4.0.0.tgz#5cdaa913aa60533117b8cc46617eda3dd2d32fd5"
   dependencies:
     es6-promise "3.0.2"
     fetch-cookie "0.4.0"

@@ -69,7 +69,7 @@
     "webpack-hot-middleware": "2.18.0"
   },
   "dependencies": {
-    "@gooddata/react-components": "2.1.1",
+    "@gooddata/react-components": "2.4.0",
     "classnames": "2.2.5",
     "gooddata": "1.7.0",
     "intl": "1.2.5",
