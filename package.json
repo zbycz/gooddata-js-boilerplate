@@ -11,7 +11,7 @@
   "scripts": {
     "test": "jest"
   },
-  "license": "SEE LICENSE IN LICENSE.txt",
+  "license": "BSD-3-Clause",
   "author": {
     "name": "Rail",
     "email": "rail@gooddata.com"
