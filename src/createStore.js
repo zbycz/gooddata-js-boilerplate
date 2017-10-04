@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import { filtersReducer, REDUX_STATE_PATH } from '@gooddata/react-components/dist/redux';
+import { filtersReducer, REDUX_STATE_PATH } from '@gooddata/react-redux-components';
 
 const appReducer = (state = {}, action) => {
     switch (action.type) {

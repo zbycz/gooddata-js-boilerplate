@@ -3,6 +3,7 @@ import { user } from 'gooddata';
 
 import SampleTable from '../components/SampleTable';
 import SampleBarChart from '../components/SampleBarChart';
+import SampleReduxFilters from '../components/SampleReduxFilters';
 
 const getAccountPageUri = () => `/account.html?lastUrl=${encodeURIComponent(window.location.href)}`;
 
@@ -41,6 +42,8 @@ export class Root extends PureComponent {
                     width={600}
                     height={400}
                 />
+
+                <SampleReduxFilters />
             </div>
         );
     }
