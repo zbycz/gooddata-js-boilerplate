@@ -78,6 +78,10 @@
     rxjs "5.4.3"
     uuid "3.0.1"
 
+"@gooddata/react-redux-components@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@gooddata/react-redux-components/-/react-redux-components-1.0.0.tgz#70b7cb315aa3e10484a8050e0877e10ef5addb05"
+
 abab@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.3.tgz#b81de5f7274ec4e756d797cd834f303642724e5d"

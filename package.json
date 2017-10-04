@@ -71,6 +71,7 @@
   },
   "dependencies": {
     "@gooddata/react-components": "2.4.0",
+    "@gooddata/react-redux-components": "1.0.0",
     "classnames": "2.2.5",
     "gooddata": "1.7.0",
     "intl": "1.2.5",
