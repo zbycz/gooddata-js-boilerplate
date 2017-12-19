@@ -13,8 +13,11 @@ export class Root extends PureComponent {
         super(props);
 
         this.state = {
-            isAuthorized: false
+            isAuthorized: false,
+            width: 300
         };
+
+        this.resizeToggle = this.resizeToggle.bind(this);
     }
 
     componentWillMount() {
@@ -25,14 +28,31 @@ export class Root extends PureComponent {
             );
     }
 
+    reflow() {
+        window.dispatchEvent(new Event('resize'));
+    }
+
+    resizeToggle(){
+        this.setState({ width: this.state.width === 800 ? 300 : 800 });
+    }
+
     render() {
-        const { isAuthorized } = this.state;
+        const { isAuthorized, width } = this.state;
         if (!isAuthorized) {
             return false;
         }
 
         return (
             <div>
+                <button onClick={this.reflow}>call reflow</button>
+                <button onClick={this.resizeToggle}>toggle size</button>
+                Resizable chart:<br />
+                <SampleBarChart
+                    width={width}
+                    height={400}
+                />
+                ----
+
                 <SampleTable
                     width={600}
                     height={400}

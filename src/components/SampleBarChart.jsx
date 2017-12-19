@@ -75,7 +75,7 @@ export default class SampleBarChart extends PureComponent {
     render() {
         const { width, height } = this.props;
         return (
-            <div style={{ height, width }}>
+            <div style={{ height, width, border: '1px gray solid' }}>
                 {this.renderLoading()}
                 {this.renderBarChart()}
             </div>
